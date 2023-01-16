@@ -12,7 +12,7 @@ function Card() {
         return (
           <div className="main-div sm:m-10" key={key}>
             <img
-              src={`/src/assets/${coin.symbol.toLowerCase()}.svg`}
+              src={`src/assets/${coin.symbol.toLowerCase()}.svg`}
               className="c-img"
               alt=""
             />
@@ -50,7 +50,7 @@ function Card() {
                     return (
                       <img
                         key={key}
-                        src={`/src/assets/${pair.toLowerCase()}.svg`}
+                        src={`src/assets/${pair.toLowerCase()}.svg`}
                         width="20px"
                       />
                     );
