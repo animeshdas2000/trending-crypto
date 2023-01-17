@@ -1,6 +1,7 @@
 import vector from "../assets/vector.svg";
 import { caption } from "./ui";
 import { data } from "../utils/data";
+
 function Card() {
   return (
     <div className="flex flex-row flex-wrap">
@@ -11,11 +12,7 @@ function Card() {
         });
         return (
           <div className="main-div sm:m-10" key={key}>
-            <img
-              src={`src/assets/${coin.symbol.toLowerCase()}.svg`}
-              className="c-img"
-              alt=""
-            />
+            <img src={coin.img} className="c-img" alt="" />
             <img src={vector} />
             <div className="new">
               <span className={`${caption} mt-2`}>
@@ -47,13 +44,7 @@ function Card() {
               <div className="mt-4 ">
                 <div className="px-10 py-2 mx-8 max-w-fit rounded-full bg-[#14172B] flex flex-row algin-center justify-evenly">
                   {coin.popular.map((pair, key) => {
-                    return (
-                      <img
-                        key={key}
-                        src={`src/assets/${pair.toLowerCase()}.svg`}
-                        width="20px"
-                      />
-                    );
+                    return <img key={key} src={pair} width="20px" />;
                   })}
                 </div>
                 <span className={caption}>Popular pairs</span>
